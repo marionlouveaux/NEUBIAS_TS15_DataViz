@@ -6,7 +6,7 @@ This repository contains the slides needed for the course "A brief introduction 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/marionlouveaux/NEUBIAS_TS15_DataViz/master/slides/images/bioimage_analysis_workflow.png" width="75%" />
+  <img src="https://raw.githubusercontent.com/marionlouveaux/NEUBIAS_TS15_DataViz/master/images/bioimage_analysis_workflow.png" width="75%" />
 </p>
 
 
