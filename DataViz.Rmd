@@ -32,6 +32,16 @@ layout: true
 
 ---
 
+# From images... to images
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/bioimage_analysis_workflow.png")
+```
+
+
+---
+
+
 
 # Graphicacy
 
@@ -73,8 +83,8 @@ your role = have a good graphicacy, be aware that your reader might lack it
 knitr::include_graphics("images/graph_families.png")
 ```
 
-> Adapated from https://www.r-graph-gallery.com/                
-https://www.data-to-viz.com/#explore          
+> Adapated from https://www.r-graph-gallery.com/            
+See also https://www.data-to-viz.com/             
 
 
 ???
@@ -553,9 +563,10 @@ Direct integration between GitHub and Zenodo
 
 # Acknowledgements     
 
-- Local organisers, Fabrice Cordelières and Florian Levet.       
-- NEUBIAS Chair and Vice-Chair, Kota Miura and Julien Colombelli.                
-- COST action.         
+- **Local organisers**: Fabrice Cordelières and Florian Levet.       
+- **NEUBIAS Vice-Chair and TS15 co-organiser**: Kota Miura.       
+- **NEUBIAS Chair**: Julien Colombelli.     
+        
       
 
 
