@@ -1,32 +1,35 @@
 ---
-title: "A brief introduction to data visualisation"
-subtitle: ""
-author: "<br> <br> Marion Louveaux"
-date: "2020-03-02"  
+title: "NEUBIAS - TS15"
+subtitle: "A brief introduction to data visualization"
+author: "Marion Louveaux"
+date: "2020-03-02"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    chakra: "libs/remark-latest.min.js"
-    css: ["my_theme.css", "default-fonts"]
+    css: ["default", "css_neubias.css", "default-fonts"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(here)
+```
+
 layout: true
 
 <div class="my-header"></div>
 <div class="my-footer">
   <div class="my-info">
-      <span></span>
+      <a href="https://marionlouveaux.fr/">marionlouveaux.fr</a>
+      <a href="https://twitter.com/MarionLouveaux">@MarionLouveaux</a>
   </div>
-</div>    
-<div class="my-footer-bar"></div>
+  <div class="my-logo">
+  </div>
+</div>       
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
 ---
 
 
@@ -37,11 +40,10 @@ knitr::include_graphics("images/hurricane_story.png")
 ```
   
 
-"**Scientists** [...] certainly **ought to create visualizations that are as transparent as possible** [...] but **readers** often have the unrealistic **expectation that any graphic should be understandable without effort**. [...] Audiences often lack knowledge of graphic symbols, grammar, and conventions, and therefore may misread certain visualizations."
-=> "help increase readers's **graphicacy**."
-*Albert Cairo*   
+"**Scientists** [...] **ought to create visualizations that are as transparent as possible** [...] but **readers** often have the unrealistic **expectation that any graphic should be understandable without effort**. [...] Audiences often lack knowledge of graphic symbols, grammar, and conventions" => "help increase readers's **graphicacy**." *Albert Cairo*   
 
-**Graphicacy**: the **ability to understand and present information** in the form of sketches, photographs, diagrams, maps, plans, charts, graphs and other non-textual formats *Wikipedia*
+**Graphicacy**: the **ability to understand and present information** in the form of sketches, photographs, diagrams, maps, plans, charts, graphs and other non-textual formats.
+     
 
 >  http://www.thefunctionalart.com/2019/09/explaining-visualizations-in-new-york.html
 https://www.nytimes.com/interactive/2019/08/29/opinion/hurricane-dorian-forecast-map.html 
@@ -60,10 +62,12 @@ here central path = most probable, cone = zone in which path can be with some pr
 your role = have a good graphicacy, be aware that your reader might lack it
 
 ---
+
+
 # Graphs        
  
 - Choice of graphical representation tightly related to your question          
-- Presentation of information should be clear, accessible, reliable and transparent             
+- Presentation of information should be **clear, accessible, reliable and transparent**            
           
 ```{r, echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/graph_families.png")
@@ -82,6 +86,8 @@ It also affects your data exploration (you might miss some important info in you
 
 
 ---
+
+
 # Clarity 
 
 ## One graph = one message
@@ -92,9 +98,13 @@ knitr::include_graphics("images/londonunderground1927.png")
 knitr::include_graphics("images/londonunderground1933.png")
 ```
 
-Original London subway map from 1927 take in account geography.        
+Original London subway map from 1927 takes geography into account.             
 
+
+> https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208              
 ---
+
+
 # Clarity 
 
 ## Less is more
@@ -108,26 +118,27 @@ knitr::include_graphics("images/data-ink.gif")
 - **Accessory elements**: Remove or lighten background, borders, grid lines 
 - **Information**: Remove redundant information & prioritize info             
 
+> https://www.darkhorseanalytics.com/blog/data-looks-better-naked        
+
 
 ---
+
+
 # Clarity 
 
 ## Colors matter
 
-Grey color: most important color.
-Distracting when random or redundant with another graph element.              
-              
-
 .pull-left[
 - No more than 6 to 7 colors
-- Easily separable
+- Easily **separable**
     - Color blind compatible
     - Printer-friendly  
-    - Contrasted            
-- Meaningful
-    - Add an extra information / highlight specific elements      
+    - Contrasted     
+    - Grey color is favoured                             
+- **Meaningful**
+    - Add an extra information / highlight specific elements (not redundant or random)      
     - Light colors -> low values, dark colors -> high values
-- Consistent      
+- **Consistent**     
     - Same color for the same variable between all graphs               
 ]          
 
@@ -138,7 +149,7 @@ Distracting when random or redundant with another graph element.
 knitr::include_graphics("images/colorBrewer.PNG")
 ```
 
-```{r, echo=FALSE, fig.align='center', out.width="80%"}
+```{r, echo=FALSE, fig.align='center', out.width="90%"}
 knitr::include_graphics("images/colorscales.png")
 ```
 
@@ -155,6 +166,8 @@ qualitative = non ordered data (categories, groups...)
 
 
 ---
+
+
 # Accessibility
 
 ## The right graph   
@@ -200,8 +213,8 @@ plot_grid(p1, p2, p3, labels = c("A", "B", "C"), nrow = 1, label_size = 30)
 
 ```
 
-> https://www.data-to-viz.com/caveat/boxplot.html 
-http://www.storytellingwithdata.com/blog?offset=1569328920602
+> https://www.data-to-viz.com/caveat/boxplot.html                    
+http://www.storytellingwithdata.com/blog?offset=1569328920602                    
 
 ???
 boxplots summarize a lot the info, they are good when distribution is known and easy to understand when distrib is gaussian, otherwise, they can hide the distribution of data
@@ -214,6 +227,8 @@ line plots for numerical ~ numerical
 
 
 ---
+
+
 # Accessibility
 
 ## The right scale  
@@ -243,8 +258,8 @@ ggplot(storms, aes(x=wind))+
   custom_plot_theme()
 ```
 
-> https://www.data-to-viz.com/caveat/bin_size.html
-https://www.data-to-viz.com/caveat/aspect_ratio.html
+> https://www.data-to-viz.com/caveat/bin_size.html                
+https://www.data-to-viz.com/caveat/aspect_ratio.html           
 
 ???
 ratio of the width to the height of a graphic. 
@@ -252,6 +267,8 @@ ratio of the width to the height of a graphic.
 - In histograms, bin size also matters.   
 
 ---
+
+
 # Accessibility 
 
 ## A tidy graph
@@ -304,7 +321,7 @@ p3 <- storms %>%
     scale_size_manual(values=c(1.5,0.2)) +
     coord_flip() +
     xlab("") +
-  ylab("Number of hurricane")+
+  ylab("Number of hurricanes")+
   custom_plot_theme() +
   theme(legend.position="none") +
   geom_label( x=2, y=180, label="1989 is among\nthe 10 worst years", size=8, color="#69b3a2") 
@@ -313,46 +330,26 @@ plot_grid(p1, p2, p3, labels = c('A', 'B', 'C'), label_size = 30, nrow=1)
 ```
 
 
-```{r, echo=FALSE, out.width="30%"}
-# storms %>% 
-#   filter(name == "Katrina") %>% 
-#   filter(year>2004) %>% 
-#   mutate(date = as.Date(paste(year, month, day, sep = "-"))) %>% 
-#   ggplot(aes(x=date, y=wind))+
-#   geom_point()+
-#   geom_line() +
-#   custom_plot_theme()
-```
-
-
-```{r, echo=FALSE, out.width="30%"}
-# storms %>% 
-#   filter(year>=2000) %>% 
-#   group_by(year, status) %>% 
-#   count(status) %>% 
-#   ggplot(aes(x=year, y=n, fill=status))+
-#   geom_col(position = position_dodge())+
-#   scale_fill_viridis_d()+
-#   custom_plot_theme()
-```
-
-> https://www.data-to-viz.com/caveat/spaghetti.html
-https://www.data-to-viz.com/caveat/overplotting.html 
-https://www.data-to-viz.com/caveat/order_data.html 
-https://www.data-to-viz.com/caveat/connect_your_dot.html
-https://www.data-to-viz.com/caveat/grouped_bar.html 
+> https://www.data-to-viz.com/caveat/spaghetti.html                      
+https://www.data-to-viz.com/caveat/overplotting.html                    
+https://www.data-to-viz.com/caveat/order_data.html                           
+https://www.data-to-viz.com/caveat/connect_your_dot.html                         
+https://www.data-to-viz.com/caveat/grouped_bar.html                      
 
 ???
 If one group matters more than the others, or has a different behavior than the others, depends on your message/question      
 
 
 ---
+
+
 # Accessibility 
 
 ## Annotations 
 
 - Annotate the graph    
-- shorten labels, switch axes if necessary for categorical variables   
+- Shorten labels
+- If necessary, switch axes for categorical variables   
 
 ```{r, echo=FALSE, fig.align='center', out.width="40%", fig.width=10}
 ggplot(storms, aes(x=as.factor(cut(wind, breaks=seq(0, max(wind), 20))), y=pressure))+
@@ -368,58 +365,66 @@ ggplot(storms, aes(x=as.factor(cut(wind, breaks=seq(0, max(wind), 20))), y=press
   annotate(geom = "text", x = 6.5, y = 980, label = "better\nstay inside", hjust = "left", size=7)
 ```
 
-> https://www.data-to-viz.com/caveat/annotation.html 
-https://www.data-to-viz.com/caveat/hard_label.html
+> https://www.data-to-viz.com/caveat/annotation.html                  
+https://www.data-to-viz.com/caveat/hard_label.html                      
 
 ???
 and legend
 Add arrows, pay attention to the legend, depends on your message
 as much as possible
 
+
+
 ---
+
+
 # Reliability
 ## No mental arithmetic
 
+- visual perception: better for length than areas and volumes       
+- optical illusions: context matters         
 
-- stacked representations require to recalculate raw data
-https://www.data-to-viz.com/caveat/multi_distribution.html
-https://www.data-to-viz.com/caveat/stacking.html
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/visualperception.png") 
+```
 
 
-- graphs using area or volumes are hard to understand
-https://www.data-to-viz.com/caveat/radius_or_area.html 
-
-https://www.data-to-viz.com/caveat/area_hard.html
-https://www.data-to-viz.com/caveat/pie.html 
-
-about length VS area
-https://hackmd.io/zS8OW22LR3mGArfX_9gi2A 
-https://hackmd.io/zS8OW22LR3mGArfX_9gi2A
+> https://hackmd.io/zS8OW22LR3mGArfX_9gi2A                 
+https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/percep.html             
 
 
 ---
+
+# Reliability
+## No mental arithmetic
+
+```{r, echo=FALSE, fig.align='center', out.width="60%"}
+knitr::include_graphics("images/piechart_final.png")
+```
+
+> https://www.data-to-viz.com/caveat/pie.html                 
+https://www.data-to-viz.com/caveat/radius_or_area.html                  
+https://www.data-to-viz.com/caveat/area_hard.html                 
+ 
+
+---
+
+
 # Reliability
 
 ## Don't be counter-intuitive              
 
-.pull-left[
-```{r, echo=FALSE, out.width="80%"}
-knitr::include_graphics("images/counterintuitive.jpg")
+```{r, echo=FALSE}
+knitr::include_graphics("images/counterintuitive_image.png")
 ```
-]          
 
-.pull-right[
-```{r, echo=FALSE, out.width="80%"}
-knitr::include_graphics("images/menwomen_arithmetic.jpg")
-```
-]           
 
-<br>       
-
-> https://www.data-to-viz.com/caveat/counter_intuitive.html 
+> https://www.data-to-viz.com/caveat/counter_intuitive.html               
 
 
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
@@ -440,72 +445,81 @@ knitr::include_graphics("images/cut_yaxis.jpg")
 ```
 ]
 
-> https://www.data-to-viz.com/caveat/circular_barplot_accordeon.html 
-https://viz.wtf/post/185041906238/not-as-cheap-as-youd-think  
-https://www.data-to-viz.com/caveat/cut_y_axis.html  
-https://www.data-to-viz.com/caveat/3d.html
+> https://www.data-to-viz.com/caveat/circular_barplot_accordeon.html                  
+https://viz.wtf/post/185041906238/not-as-cheap-as-youd-think                    
+https://www.data-to-viz.com/caveat/cut_y_axis.html                     
+https://www.data-to-viz.com/caveat/3d.html                       
 
 
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
 
 - Dual y axis            
-```{r, echo=FALSE, out.width="50%"}
-knitr::include_graphics("images/dualaxis.png")
-knitr::include_graphics("images/dualaxis2.png")
-knitr::include_graphics("images/dualaxis3.png")
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("images/dualaxis_image.png")
 ```
 
->  https://junkcharts.typepad.com/junk_charts/2019/11/graph-literacy-in-a-sense.html
-https://blog.datawrapper.de/dualaxis/
-https://edaemeklioglu.wordpress.com/2015/02/15/wtf-visualizations/ 
+>  https://junkcharts.typepad.com/junk_charts/2019/11/graph-literacy-in-a-sense.html                             
+https://blog.datawrapper.de/dualaxis/                      
+https://edaemeklioglu.wordpress.com/2015/02/15/wtf-visualizations/                       
 
 ???
 scales of each y axis are arbitrary => can be misleading 
+
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
 
 
-- barbarplot         
-```{r, echo=FALSE, out.width="50%"}
-knitr::include_graphics("images/barbaplot.png")
-knitr::include_graphics("images/barbaplot2.png")
+- Barbarplot         
+```{r, echo=FALSE, out.width="65%", fig.align='center'}
+knitr::include_graphics("images/barbaplot_image.png")
 ```
 
->https://www.data-to-viz.com/caveat/error_bar.html
-Weissgerber et al. 2015
+>https://www.data-to-viz.com/caveat/error_bar.html                                 
+Weissgerber et al. 2015                    
 
 
 ---
+
+
 # Transparency
 ## Automate graph production, avoid introducing mistakes   
 
 
-```{r, echo=FALSE, out.width="30%", fig.align='center'}
-knitr::include_graphics("images/calc_error.png")
-```
-
 
 .pull-left[
-Raw data or graphical representation: No manual manipulation!!!
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+knitr::include_graphics("images/calc_error.png")        
+knitr::include_graphics("images/wtf_dataviz_babyboomer.png")
+```
 ]
               
 .pull-right[
-```{r, echo=FALSE, out.width="50%"}
+<br>    
+<br>    
+```{r, echo=FALSE, out.width="30%", fig.align='center'}
 knitr::include_graphics("images/1024px-ISO_7010_P010_donottouch.png")
 ```
-
+                
+No manual manipulation of raw data or graphical representations!!!
 ]
 
        
-> https://www.data-to-viz.com/caveat/calculation_error.html                  
-https://viz.wtf/            
+> https://www.data-to-viz.com/caveat/calculation_error.html                                              
+https://viz.wtf/                
+https://viz.wtf/post/59697293967/hes-243-baby-boomer                 
 
 ---
+
+
 # Transparency
 ## Share your code
 
@@ -528,19 +542,15 @@ Direct integration between GitHub and Zenodo
 
 
 ---
+
+
 # Acknowledgements     
 
+NEUBIAS Chair and Vice-Chair, Kota Miura and Julien Colombelli.         
+COST action.        
+Local organisers, Fabrice Cordelières and Florian Levet.      
 
 
-
----
-# References
-
-https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208 
-
-http://www.delucchiplus.com/data-visualization-gets-ugly/ 
-
-https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1002128&type=printable 
 
 
 

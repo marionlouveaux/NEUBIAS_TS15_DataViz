@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>A brief introduction to data visualisation</title>
+    <title>NEUBIAS - TS15</title>
     <meta charset="utf-8" />
-    <meta name="author" content="    Marion Louveaux" />
+    <meta name="author" content="Marion Louveaux" />
     <meta name="date" content="2020-03-02" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="my_theme.css" type="text/css" />
+    <link rel="stylesheet" href="css_neubias.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# A brief introduction to data visualisation
-### <br> <br> Marion Louveaux
+# NEUBIAS - TS15
+## A brief introduction to data visualization
+### Marion Louveaux
 ### 2020-03-02
 
 ---
+
+
 
 
 layout: true
@@ -24,11 +28,12 @@ layout: true
 &lt;div class="my-header"&gt;&lt;/div&gt;
 &lt;div class="my-footer"&gt;
   &lt;div class="my-info"&gt;
-      &lt;span&gt;&lt;/span&gt;
+      &lt;a href="https://marionlouveaux.fr/"&gt;marionlouveaux.fr&lt;/a&gt;
+      &lt;a href="https://twitter.com/MarionLouveaux"&gt;@MarionLouveaux&lt;/a&gt;
   &lt;/div&gt;
-&lt;/div&gt;    
-&lt;div class="my-footer-bar"&gt;&lt;/div&gt;
-
+  &lt;div class="my-logo"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;       
 
 ---
 
@@ -38,11 +43,10 @@ layout: true
 &lt;img src="images/hurricane_story.png" width="4396" style="display: block; margin: auto;" /&gt;
   
 
-"**Scientists** [...] certainly **ought to create visualizations that are as transparent as possible** [...] but **readers** often have the unrealistic **expectation that any graphic should be understandable without effort**. [...] Audiences often lack knowledge of graphic symbols, grammar, and conventions, and therefore may misread certain visualizations."
-=&gt; "help increase readers's **graphicacy**."
-*Albert Cairo*   
+"**Scientists** [...] **ought to create visualizations that are as transparent as possible** [...] but **readers** often have the unrealistic **expectation that any graphic should be understandable without effort**. [...] Audiences often lack knowledge of graphic symbols, grammar, and conventions" =&gt; "help increase readers's **graphicacy**." *Albert Cairo*   
 
-**Graphicacy**: the **ability to understand and present information** in the form of sketches, photographs, diagrams, maps, plans, charts, graphs and other non-textual formats *Wikipedia*
+**Graphicacy**: the **ability to understand and present information** in the form of sketches, photographs, diagrams, maps, plans, charts, graphs and other non-textual formats.
+     
 
 &gt;  http://www.thefunctionalart.com/2019/09/explaining-visualizations-in-new-york.html
 https://www.nytimes.com/interactive/2019/08/29/opinion/hurricane-dorian-forecast-map.html 
@@ -61,12 +65,14 @@ here central path = most probable, cone = zone in which path can be with some pr
 your role = have a good graphicacy, be aware that your reader might lack it
 
 ---
+
+
 # Graphs        
  
 - Choice of graphical representation tightly related to your question          
-- Presentation of information should be clear, accessible, reliable and transparent             
+- Presentation of information should be **clear, accessible, reliable and transparent**            
           
-&lt;img src="images/graph_families.png" width="5205" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/graph_families.png" width="4631" style="display: block; margin: auto;" /&gt;
 
 &gt; https://www.r-graph-gallery.com/          
 https://www.data-to-viz.com/#explore          
@@ -81,6 +87,8 @@ It also affects your data exploration (you might miss some important info in you
 
 
 ---
+
+
 # Clarity 
 
 ## One graph = one message
@@ -88,9 +96,13 @@ It also affects your data exploration (you might miss some important info in you
 
 &lt;img src="images/londonunderground1927.png" width="50%" /&gt;&lt;img src="images/londonunderground1933.png" width="50%" /&gt;
 
-Original London subway map from 1927 take in account geography.        
+Original London subway map from 1927 takes geography into account.             
 
+
+&gt; https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208              
 ---
+
+
 # Clarity 
 
 ## Less is more
@@ -102,26 +114,27 @@ Original London subway map from 1927 take in account geography.
 - **Accessory elements**: Remove or lighten background, borders, grid lines 
 - **Information**: Remove redundant information &amp; prioritize info             
 
+&gt; https://www.darkhorseanalytics.com/blog/data-looks-better-naked        
+
 
 ---
+
+
 # Clarity 
 
 ## Colors matter
 
-Grey color: most important color.
-Distracting when random or redundant with another graph element.              
-              
-
 .pull-left[
 - No more than 6 to 7 colors
-- Easily separable
+- Easily **separable**
     - Color blind compatible
     - Printer-friendly  
-    - Contrasted            
-- Meaningful
-    - Add an extra information / highlight specific elements      
+    - Contrasted     
+    - Grey color is favoured                             
+- **Meaningful**
+    - Add an extra information / highlight specific elements (not redundant or random)      
     - Light colors -&gt; low values, dark colors -&gt; high values
-- Consistent      
+- **Consistent**     
     - Same color for the same variable between all graphs               
 ]          
 
@@ -130,7 +143,7 @@ Distracting when random or redundant with another graph element.
 .pull-right[
 &lt;img src="images/colorBrewer.PNG" width="1384" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="images/colorscales.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/colorscales.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]              
             
@@ -145,6 +158,8 @@ qualitative = non ordered data (categories, groups...)
 
 
 ---
+
+
 # Accessibility
 
 ## The right graph   
@@ -152,8 +167,8 @@ qualitative = non ordered data (categories, groups...)
 
 &lt;img src="DataViz_files/figure-html/unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
-&gt; https://www.data-to-viz.com/caveat/boxplot.html 
-http://www.storytellingwithdata.com/blog?offset=1569328920602
+&gt; https://www.data-to-viz.com/caveat/boxplot.html                    
+http://www.storytellingwithdata.com/blog?offset=1569328920602                    
 
 ???
 boxplots summarize a lot the info, they are good when distribution is known and easy to understand when distrib is gaussian, otherwise, they can hide the distribution of data
@@ -166,6 +181,8 @@ line plots for numerical ~ numerical
 
 
 ---
+
+
 # Accessibility
 
 ## The right scale  
@@ -178,8 +195,8 @@ line plots for numerical ~ numerical
 - aspect ratio    
 &lt;img src="DataViz_files/figure-html/unnamed-chunk-9-1.png" width="90%" style="display: block; margin: auto;" /&gt;
 
-&gt; https://www.data-to-viz.com/caveat/bin_size.html
-https://www.data-to-viz.com/caveat/aspect_ratio.html
+&gt; https://www.data-to-viz.com/caveat/bin_size.html                
+https://www.data-to-viz.com/caveat/aspect_ratio.html           
 
 ???
 ratio of the width to the height of a graphic. 
@@ -187,6 +204,8 @@ ratio of the width to the height of a graphic.
 - In histograms, bin size also matters.   
 
 ---
+
+
 # Accessibility 
 
 ## A tidy graph
@@ -197,84 +216,83 @@ ratio of the width to the height of a graphic.
 &lt;img src="DataViz_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
 
 
-
-
-
-
-
-&gt; https://www.data-to-viz.com/caveat/spaghetti.html
-https://www.data-to-viz.com/caveat/overplotting.html 
-https://www.data-to-viz.com/caveat/order_data.html 
-https://www.data-to-viz.com/caveat/connect_your_dot.html
-https://www.data-to-viz.com/caveat/grouped_bar.html 
+&gt; https://www.data-to-viz.com/caveat/spaghetti.html                      
+https://www.data-to-viz.com/caveat/overplotting.html                    
+https://www.data-to-viz.com/caveat/order_data.html                           
+https://www.data-to-viz.com/caveat/connect_your_dot.html                         
+https://www.data-to-viz.com/caveat/grouped_bar.html                      
 
 ???
 If one group matters more than the others, or has a different behavior than the others, depends on your message/question      
 
 
 ---
+
+
 # Accessibility 
 
 ## Annotations 
 
 - Annotate the graph    
-- shorten labels, switch axes if necessary for categorical variables   
+- Shorten labels
+- If necessary, switch axes for categorical variables   
 
-&lt;img src="DataViz_files/figure-html/unnamed-chunk-13-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="DataViz_files/figure-html/unnamed-chunk-11-1.png" width="40%" style="display: block; margin: auto;" /&gt;
 
-&gt; https://www.data-to-viz.com/caveat/annotation.html 
-https://www.data-to-viz.com/caveat/hard_label.html
+&gt; https://www.data-to-viz.com/caveat/annotation.html                  
+https://www.data-to-viz.com/caveat/hard_label.html                      
 
 ???
 and legend
 Add arrows, pay attention to the legend, depends on your message
 as much as possible
 
----
-# Reliability
 
-=&gt; No misleading representation
 
 ---
+
+
 # Reliability
 ## No mental arithmetic
 
+- visual perception: better for length than areas and volumes       
+- optical illusions: context matters         
 
-- stacked representations require to recalculate raw data
-https://www.data-to-viz.com/caveat/multi_distribution.html
-https://www.data-to-viz.com/caveat/stacking.html
+&lt;img src="images/visualperception.png" width="14981" style="display: block; margin: auto;" /&gt;
 
 
-- graphs using area or volumes are hard to understand
-https://www.data-to-viz.com/caveat/radius_or_area.html 
-
-https://www.data-to-viz.com/caveat/area_hard.html
-https://www.data-to-viz.com/caveat/pie.html 
-
-about length VS area
-https://hackmd.io/zS8OW22LR3mGArfX_9gi2A 
-https://hackmd.io/zS8OW22LR3mGArfX_9gi2A
+&gt; https://hackmd.io/zS8OW22LR3mGArfX_9gi2A                 
+https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/percep.html             
 
 
 ---
+
+# Reliability
+## No mental arithmetic
+
+&lt;img src="images/piechart_final.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+&gt; https://www.data-to-viz.com/caveat/pie.html                 
+https://www.data-to-viz.com/caveat/radius_or_area.html                  
+https://www.data-to-viz.com/caveat/area_hard.html                 
+ 
+
+---
+
+
 # Reliability
 
 ## Don't be counter-intuitive              
 
-.pull-left[
-&lt;img src="images/counterintuitive.jpg" width="80%" /&gt;
-]          
+&lt;img src="images/counterintuitive_image.png" width="4301" /&gt;
 
-.pull-right[
-&lt;img src="images/menwomen_arithmetic.jpg" width="80%" /&gt;
-]           
 
-&lt;br&gt;       
-
-&gt; https://www.data-to-viz.com/caveat/counter_intuitive.html 
+&gt; https://www.data-to-viz.com/caveat/counter_intuitive.html               
 
 
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
@@ -288,64 +306,75 @@ https://hackmd.io/zS8OW22LR3mGArfX_9gi2A
 &lt;img src="images/sheeps.png" width="924" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
-&lt;img src="images/cut_yaxis.jpg" style="display: block; margin: auto;" /&gt;
+&lt;img src="images/cut_yaxis.jpg" width="853" style="display: block; margin: auto;" /&gt;
 ]
 
-&gt; https://www.data-to-viz.com/caveat/circular_barplot_accordeon.html 
-https://viz.wtf/post/185041906238/not-as-cheap-as-youd-think  
-https://www.data-to-viz.com/caveat/cut_y_axis.html  
-https://www.data-to-viz.com/caveat/3d.html
+&gt; https://www.data-to-viz.com/caveat/circular_barplot_accordeon.html                  
+https://viz.wtf/post/185041906238/not-as-cheap-as-youd-think                    
+https://www.data-to-viz.com/caveat/cut_y_axis.html                     
+https://www.data-to-viz.com/caveat/3d.html                       
 
 
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
 
 - Dual y axis            
-&lt;img src="images/dualaxis.png" width="60%" /&gt;&lt;img src="images/dualaxis2.png" width="60%" /&gt;&lt;img src="images/dualaxis3.png" width="60%" /&gt;
+&lt;img src="images/dualaxis_image.png" width="90%" style="display: block; margin: auto;" /&gt;
 
-&gt;  https://junkcharts.typepad.com/junk_charts/2019/11/graph-literacy-in-a-sense.html
-https://blog.datawrapper.de/dualaxis/
-https://edaemeklioglu.wordpress.com/2015/02/15/wtf-visualizations/ 
+&gt;  https://junkcharts.typepad.com/junk_charts/2019/11/graph-literacy-in-a-sense.html                             
+https://blog.datawrapper.de/dualaxis/                      
+https://edaemeklioglu.wordpress.com/2015/02/15/wtf-visualizations/                       
 
 ???
 scales of each y axis are arbitrary =&gt; can be misleading 
+
 ---
+
+
 # Reliability
 
 ## Don't use confusing representations
 
 
-- barbarplot         
-&lt;img src="images/barbaplot.png" width="60%" /&gt;&lt;img src="images/barbaplot2.png" width="60%" /&gt;
+- Barbarplot         
+&lt;img src="images/barbaplot_image.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-&gt;https://www.data-to-viz.com/caveat/error_bar.html
-Weissgerber et al. 2015
+&gt;https://www.data-to-viz.com/caveat/error_bar.html                                 
+Weissgerber et al. 2015                    
 
 
 ---
+
+
 # Transparency
 ## Automate graph production, avoid introducing mistakes   
 
 
-&lt;img src="images/calc_error.png" width="30%" style="display: block; margin: auto;" /&gt;
-
 
 .pull-left[
-Raw data or graphical representation: No manual manipulation!!!
+&lt;img src="images/calc_error.png" width="65%" style="display: block; margin: auto;" /&gt;&lt;img src="images/wtf_dataviz_babyboomer.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
               
 .pull-right[
-&lt;img src="images/1024px-ISO_7010_P010_donottouch.png" width="50%" /&gt;
-
+&lt;br&gt;    
+&lt;br&gt;    
+&lt;img src="images/1024px-ISO_7010_P010_donottouch.png" width="30%" style="display: block; margin: auto;" /&gt;
+                
+No manual manipulation of raw data or graphical representations!!!
 ]
 
        
-&gt; https://www.data-to-viz.com/caveat/calculation_error.html                  
-https://viz.wtf/            
+&gt; https://www.data-to-viz.com/caveat/calculation_error.html                                              
+https://viz.wtf/                
+https://viz.wtf/post/59697293967/hes-243-baby-boomer                 
 
 ---
+
+
 # Transparency
 ## Share your code
 
@@ -364,22 +393,16 @@ Direct integration between GitHub and Zenodo
 
 
 ---
+
+
 # Acknowledgements     
 
-
-
-
----
-# References
-
-https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208 
-
-http://www.delucchiplus.com/data-visualization-gets-ugly/ 
-
-https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1002128&amp;type=printable
+NEUBIAS Chair and Vice-Chair, Kota Miura and Julien Colombelli.         
+COST action.        
+Local organisers, Fabrice Cordelières and Florian Levet.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="libs/remark-latest.min.js"></script>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
