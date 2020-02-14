@@ -30,10 +30,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="276.92966"
+     inkscape:cx="146.57252"
      inkscape:cy="222.25017"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1152"
      showgrid="false"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
@@ -52,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -446,7 +446,7 @@
              x="74.751289"
              y="36.605698" /></flowRegion><flowPara
            id="flowPara573"
-           style="font-size:10.66666698px;line-height:0.25">What is the spatial distribution of two fluorescent markers in a tissue</flowPara></flowRoot>    </g>
+           style="font-size:10.66666698px;line-height:0.25">What is the spatial distribution of two fluorescent markers in a tissue?</flowPara></flowRoot>    </g>
     <g
        id="g1169"
        transform="translate(0.5860057,6.9025114)">
@@ -602,6 +602,6 @@
              x="74.751289"
              y="36.605698" /></flowRegion><flowPara
            id="flowPara589"
-           style="font-size:10.66666698px;line-height:0.25">How are different individuals connected over space and/or time. Lineage, cell fate changes...</flowPara></flowRoot>    </g>
+           style="font-size:10.66666698px;line-height:0.25">How are different individuals connected over space and/or time? Lineage, cell fate changes...</flowPara></flowRoot>    </g>
   </g>
 </svg>

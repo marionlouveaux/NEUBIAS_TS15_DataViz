@@ -2,7 +2,7 @@
 title: "NEUBIAS - TS15"
 subtitle: "A brief introduction to data visualization"
 author: "Marion Louveaux"
-date: "2020-03-02"
+date: "2020-03-01"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -73,7 +73,7 @@ your role = have a good graphicacy, be aware that your reader might lack it
 knitr::include_graphics("images/graph_families.png")
 ```
 
-> https://www.r-graph-gallery.com/          
+> Adapated from https://www.r-graph-gallery.com/                
 https://www.data-to-viz.com/#explore          
 
 
@@ -90,7 +90,7 @@ It also affects your data exploration (you might miss some important info in you
 
 # Clarity 
 
-## One graph = one message
+## Less is more
 
 
 ```{r, echo=FALSE, out.width="50%"}
@@ -233,7 +233,7 @@ line plots for numerical ~ numerical
 
 ## The right scale  
         
-- histogram bin size          
+- Histogram bin size          
 
 ```{r, echo=FALSE, fig.align='center', out.width="90%", fig.width=30}
 p1 <- ggplot(storms, aes(x=wind))+
@@ -250,7 +250,7 @@ plot_grid(p1, p2, labels = c('A', 'B'), label_size = 30)
 ```
 
 
-- aspect ratio    
+- Aspect ratio    
 ```{r, echo=FALSE, fig.align='center', out.width="90%", fig.width=90}
 ggplot(storms, aes(x=wind))+
   geom_histogram(bins = 30) +
@@ -381,8 +381,8 @@ as much as possible
 # Reliability
 ## No mental arithmetic
 
-- visual perception: better for length than areas and volumes       
-- optical illusions: context matters         
+- Visual perception: better for length than areas and volumes       
+- Optical illusions: context matters         
 
 ```{r, echo=FALSE, fig.align='center'}
 knitr::include_graphics("images/visualperception.png") 
@@ -419,7 +419,8 @@ knitr::include_graphics("images/counterintuitive_image.png")
 ```
 
 
-> https://www.data-to-viz.com/caveat/counter_intuitive.html               
+> https://www.data-to-viz.com/caveat/counter_intuitive.html        
+https://junkcharts.typepad.com/junk_charts/simplicity/        
 
 
 ---
@@ -427,10 +428,9 @@ knitr::include_graphics("images/counterintuitive_image.png")
 
 # Reliability
 
-## Don't use confusing representations
+## Don't use misleading representations
 
-- Avoid distorted graphs        
-- Avoid 3D      
+- Avoid distorted graphs and 3D               
 - Don't cut y axis on barplots      
 
 
@@ -456,7 +456,7 @@ https://www.data-to-viz.com/caveat/3d.html
 
 # Reliability
 
-## Don't use confusing representations
+## Don't use misleading representations
 
 - Dual y axis            
 ```{r, echo=FALSE, out.width="90%", fig.align='center'}
@@ -475,7 +475,7 @@ scales of each y axis are arbitrary => can be misleading
 
 # Reliability
 
-## Don't use confusing representations
+## Don't use misleading representations
 
 
 - Barbarplot         
@@ -496,8 +496,11 @@ Weissgerber et al. 2015
 
 
 .pull-left[
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+```{r, echo=FALSE, fig.align='center', out.width="50%"}
 knitr::include_graphics("images/calc_error.png")        
+```
+
+```{r, echo=FALSE, fig.align='center', out.width="70%"}
 knitr::include_graphics("images/wtf_dataviz_babyboomer.png")
 ```
 ]
@@ -514,8 +517,8 @@ No manual manipulation of raw data or graphical representations!!!
 
        
 > https://www.data-to-viz.com/caveat/calculation_error.html                                              
-https://viz.wtf/                
-https://viz.wtf/post/59697293967/hes-243-baby-boomer                 
+https://viz.wtf/post/169392205697/fewer-people-would-have-a-hard-time-giving-up                            
+https://viz.wtf/post/59697293967/hes-243-baby-boomer                  
 
 ---
 
@@ -535,6 +538,10 @@ knitr::include_graphics("images/gitlab-logo-gray-rgb.png")
 knitr::include_graphics("images/zenodo-gradient-2500.png")
 ```
 
+> https://github.com/            
+https://about.gitlab.com/      
+https://zenodo.org/          
+
 
 ???
 Provide the code you used to create your graphs.   
@@ -546,9 +553,10 @@ Direct integration between GitHub and Zenodo
 
 # Acknowledgements     
 
-NEUBIAS Chair and Vice-Chair, Kota Miura and Julien Colombelli.         
-COST action.        
-Local organisers, Fabrice Cordelières and Florian Levet.      
+- Local organisers, Fabrice Cordelières and Florian Levet.       
+- NEUBIAS Chair and Vice-Chair, Kota Miura and Julien Colombelli.                
+- COST action.         
+      
 
 
 
