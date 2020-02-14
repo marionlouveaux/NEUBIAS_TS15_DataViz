@@ -26,8 +26,9 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Acknowledgements
 
-- **Local organisers**: Fabrice Cordelières and Florian Levet             
-- **NEUBIAS chair**: Julien Colombelli          
+- **Local organisers**: Fabrice Cordelières and Florian Levet.       
+- **NEUBIAS Vice-Chair and TS15 co-organiser**: Kota Miura.       
+- **NEUBIAS Chair**: Julien Colombelli.         
 
 
 
