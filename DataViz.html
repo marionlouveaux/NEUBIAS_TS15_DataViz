@@ -41,7 +41,9 @@ layout: true
 
 &lt;img src="images/bioimage_analysis_workflow.png" width="2224" /&gt;
 
-
+???
+Bioimage analysts extract data from images of biological samples.       
+To visualize data, one need to create new images = the graphs.       
 ---
 
 
@@ -61,16 +63,19 @@ https://www.nytimes.com/interactive/2019/08/29/opinion/hurricane-dorian-forecast
 https://en.wikipedia.org/wiki/Graphicacy
 
 ???
-Data viz real complex job
-Misunderstanding graph = real-world consequences 
+Data viz is a complex job
+Misunderstanding graph can have real-world consequences 
 hurricane Irma, 2017 approaching Florida East Coast
-Predictive map of hurricane trajectory shown on TV, represents the most probable trajectory + uncertainty
-People at the center packing
-Irma took another trajectory, people off the most probable trajectory not prepared
+Predictive map of hurricane trajectory (shown on TV) represents the most probable trajectory + uncertainty
+People at the center of the cone (most probable trajectory) preparing for the hurricane, not the others      
+Irma took another trajectory
 
-viz = info summary, with conventions, symbols etc. 
-here central path = most probable, cone = zone in which path can be with some proba treshold, not where it will hit
-your role = have a good graphicacy, be aware that your reader might lack it
+viz = info summary, with conventions, symbols etc. The popular say "one image is worth 1000 words is not always true"
+here central path = most probable, cone = zone in which path can be with some probability treshold, not where it will hit in reality        
+In the case of hurricane, one map might not be enough       
+your role = have a good graphicacy, be aware that your reader might lack graphicacy
+
+https://www.lemonde.fr/les-decodeurs/article/2020/01/29/coronavirus-zika-ebola-quelles-maladies-sont-les-plus-contagieuses-ou-les-plus-mortelles_6027661_4355770.html 
 
 ---
 
@@ -82,32 +87,33 @@ your role = have a good graphicacy, be aware that your reader might lack it
           
 &lt;img src="images/graph_families.png" width="4631" style="display: block; margin: auto;" /&gt;
 
-&gt; Adapated from https://www.r-graph-gallery.com/            
+&gt; Adapted from https://www.r-graph-gallery.com/            
 See also https://www.data-to-viz.com/             
 
 
 ???
 What information do you want to present? = What is your message? To which question do you answer?       
 =&gt; Choice of graphical representation matters      
-It is tightly related to your question. 
+
+Families of graphical representations depending on your question &amp; data -&gt; see links      
 
 It also affects your data exploration (you might miss some important info in your data with the wrong data representation). 
 
-
 ---
-
 
 # Clarity 
 
 ## Less is more
-
 
 &lt;img src="images/londonunderground1927.png" width="50%" /&gt;&lt;img src="images/londonunderground1933.png" width="50%" /&gt;
 
 Original London subway map from 1927 takes geography into account.             
 
 
-&gt; https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208              
+&gt; https://towardsdatascience.com/the-power-of-visualization-in-data-science-1995d56e4208          
+
+???
+What is the message? Organisation of metro lines, not the geography of London =&gt; simplify       
 ---
 
 
@@ -120,10 +126,14 @@ Original London subway map from 1927 takes geography into account.
         
 - **Color**: Reduce colors, remove shadows and glossy effects for decoration  
 - **Accessory elements**: Remove or lighten background, borders, grid lines 
-- **Information**: Remove redundant information &amp; prioritize info             
+- **Information**: Remove redundant information &amp; prioritize info         
+ 
+The data-ink ratio is a concept introduced by Edward Tufte in The Visual Display of Quantitative Data (1983).         
 
 &gt; https://www.darkhorseanalytics.com/blog/data-looks-better-naked        
 
+???
+Simplification of a graph, 40 seconds video     
 
 ---
 
@@ -164,7 +174,7 @@ Are your data sequential = ordered from low to high
 diverging = ordered from low to high, mid-range value matters (for instance, mid-range = average value)
 qualitative = non ordered data (categories, groups...)
 
-
+Some colors are associated with some specific items for instance green = land/ forest and blue = sea/ocean on a map
 ---
 
 
@@ -179,15 +189,10 @@ qualitative = non ordered data (categories, groups...)
 http://www.storytellingwithdata.com/blog?offset=1569328920602                    
 
 ???
+Choice of plot depends on data and message
+here: wind is discrete not continuous, scatterplot not adapted
 boxplots summarize a lot the info, they are good when distribution is known and easy to understand when distrib is gaussian, otherwise, they can hide the distribution of data
-When looking at distributions, violin plots or ridges when there is many distributions give more info xs
-
-
-
-barplots for numerical ~ categorical variables
-line plots for numerical ~ numerical 
-
-
+When looking at distributions, violin plots or ridges when there is many distributions give more info
 ---
 
 
@@ -209,7 +214,7 @@ https://www.data-to-viz.com/caveat/aspect_ratio.html
 ???
 ratio of the width to the height of a graphic. 
 - Play with the aspect ratio of the graph to highlight the best the trend in your data. 
-- In histograms, bin size also matters.   
+- In histograms, bin size also matters (can hide some effects).   
 
 ---
 
@@ -252,8 +257,9 @@ https://www.data-to-viz.com/caveat/hard_label.html
 
 ???
 and legend
-Add arrows, pay attention to the legend, depends on your message
-as much as possible
+Add arrows
+pay attention to the legend, depends on your message
+switched axes -&gt; see slide before       
 
 
 
@@ -272,6 +278,21 @@ as much as possible
 &gt; https://hackmd.io/zS8OW22LR3mGArfX_9gi2A                 
 https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/percep.html             
 
+???
+prepare pen and paper for the next slide      
+---
+
+# Reliability
+## No mental arithmetic
+
+&lt;img src="images/piechart_final_half.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+&gt; https://www.data-to-viz.com/caveat/pie.html                 
+https://www.data-to-viz.com/caveat/radius_or_area.html                  
+https://www.data-to-viz.com/caveat/area_hard.html                 
+ 
+
+
 
 ---
 
@@ -284,7 +305,9 @@ https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/percep.html
 https://www.data-to-viz.com/caveat/radius_or_area.html                  
 https://www.data-to-viz.com/caveat/area_hard.html                 
  
+???
 
+No useless effort from the reader to read the graph. We usually spend a few seconds only on the graph
 ---
 
 
@@ -351,10 +374,27 @@ scales of each y axis are arbitrary =&gt; can be misleading
 - Barbarplot         
 &lt;img src="images/barbaplot_image.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-&gt;https://www.data-to-viz.com/caveat/error_bar.html                                 
+&gt;https://www.data-to-viz.com/caveat/error_bar.html     
+https://rtask.thinkr.fr/data-visualisation-pitfalls-how-to-avoid-barbarplots/           
 Weissgerber et al. 2015                    
 
+???
 
+A bar is to represent a quantity, a volume, for data count, not for a distribution
+=&gt; Hiding the distribution
+
+Reducing the data to one number: the mean
+=&gt; in this case why not put only one point and whiskers? if dist are gaussian
+
+Other pb: the whiskers can show several things
+Standard Deviation = amount of dispersion of the variable. Not useful to show stats difference between means of two groups
+
+Standard Error = standard deviation of the mean of the variable. With a very large sample size, the SE tends toward 0.
+
+Confidence interval = only this show the stat diff of mean, but dist hidden, bar not appropriate
+
+ 
+=&gt; use violin plots + plot points with jitter on top of it or use dotplots         
 ---
 
 
