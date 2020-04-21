@@ -2,7 +2,8 @@
 
 ## A brief introduction to data visualization
 
-This repository contains the slides needed for the course "A brief introduction to data visualization" given by Marion Louveaux during the [NEUBIAS Training School 15 for Bioimage Analysts in Bordeaux in 2020](http://eubias.org/NEUBIAS/training-schools/analysts/ts15-bordeaux-2020/).     
+This repository contains the slides needed for the course "A brief introduction to data visualization" given by Marion Louveaux during the [NEUBIAS Training School 15 for Bioimage Analysts in Bordeaux in 2020](http://eubias.org/NEUBIAS/training-schools/analysts/ts15-bordeaux-2020/).   
+See slides directly: https://marionlouveaux.github.io/NEUBIAS_TS15_DataViz/      
 
 
 <p align="center">
